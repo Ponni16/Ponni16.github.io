@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V. Ponni | ML & Data Analytics Aspirant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0d1117; color: #c9d1d9; }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(88, 166, 255, 0.15); }
+        
+        /* Floating Marquee Animation */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+            display: inline-flex;
+            white-space: nowrap;
+            animation: scroll 25s linear infinite;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-teal-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-[#0d1117]/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold text-white hover:text-teal-400 transition cursor-pointer">
+                Ponni<span class="text-teal-400">.</span>Data
+            </a>
+            <div class="space-x-6 text-sm font-medium hidden md:block">
+                <a href="#home" class="hover:text-teal-400 transition">Home</a>
+                <a href="#about" class="hover:text-teal-400 transition">About</a>
+                <a href="#skills" class="hover:text-teal-400 transition">Skills</a>
+                <a href="#education" class="hover:text-teal-400 transition">Education</a>
+                <a href="#projects" class="hover:text-teal-400 transition">Projects</a>
+                <a href="#experience" class="hover:text-teal-400 transition">Experience</a>
+                <a href="#contact" class="hover:text-teal-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home (Hero) Section -->
+    <section id="home" class="pt-32 pb-12 px-4 bg-[#0d1117] border-b border-gray-800 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left: Text & Metrics -->
+            <div>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-2 tracking-tight">
+                    V. <br><span class="text-[#58a6ff]">Ponni</span>
+                </h1>
+                <p class="text-xl text-[#58a6ff] font-semibold mb-6">B.E. CSE Student | ML Aspirant</p>
+                
+                <p class="text-gray-400 text-lg mb-4 max-w-lg">
+                    Passionate Computer Science student focusing on Data Analysis, Analytical Tools, and applied Machine Learning development to drive data-driven solutions.
+                </p>
+                <p class="text-gray-500 mb-8 flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt"></i> Dharmapuri, Tamil Nadu, India
+                </p>
+
+                <div class="flex gap-4 mb-10">
+                    <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-teal-400 to-[#58a6ff] text-gray-900 font-bold rounded-lg hover:opacity-90 transition-opacity">
+                        View My Projects
+                    </a>
+                    <a href="#" class="px-6 py-3 bg-[#161b22] border border-gray-700 text-white font-medium rounded-lg hover:bg-gray-800 transition-colors">
+                        View CV
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-[#11151d] p-4 rounded-xl border border-gray-800">
+                        <i class="fas fa-graduation-cap text-gray-400 mb-2"></i>
+                        <h4 class="text-white font-bold text-sm">B.E. CSE</h4>
+                        <p class="text-gray-500 text-xs">2023 - 2027</p>
+                    </div>
+                    <div class="bg-[#11151d] p-4 rounded-xl border border-gray-800">
+                        <i class="fas fa-briefcase text-gray-400 mb-2"></i>
+                        <h4 class="text-white font-bold text-sm">Internship</h4>
+                        <p class="text-gray-500 text-xs">TVK Technologies</p>
+                    </div>
+                    <div class="bg-[#11151d] p-4 rounded-xl border border-gray-800">
+                        <i class="fas fa-chart-line text-gray-400 mb-2"></i>
+                        <h4 class="text-white font-bold text-sm">8.3 CGPA</h4>
+                        <p class="text-gray-500 text-xs">Academic Excellence</p>
+                    </div>
+                    <div class="bg-[#11151d] p-4 rounded-xl border border-gray-800">
+                        <i class="fas fa-rocket text-gray-400 mb-2"></i>
+                        <h4 class="text-white font-bold text-sm">3+ Projects</h4>
+                        <p class="text-gray-500 text-xs">Built with Python & ML</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Terminal Code UI -->
+            <div class="relative w-full max-w-lg mx-auto lg:ml-auto">
+                <div class="bg-[#090c10] border border-[#30363d] rounded-xl overflow-hidden shadow-2xl">
+                    <div class="bg-[#161b22] px-4 py-3 flex items-center border-b border-[#30363d]">
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="mx-auto text-xs text-gray-400 font-mono">developer_profile.py</div>
+                    </div>
+                    <div class="p-6 font-mono text-sm leading-relaxed overflow-x-auto">
+                        <span class="text-gray-500"># Student Profile & Focus Areas</span><br>
+                        <span class="text-pink-400">class</span> <span class="text-green-400">DeveloperProfile</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-pink-400">def</span> <span class="text-blue-400">__init__</span>(<span class="text-orange-300">self</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-orange-300">self</span>.name = <span class="text-yellow-300">"V. Ponni"</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-orange-300">self</span>.degree = <span class="text-yellow-300">"B.E. Computer Science and Engineering"</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-orange-300">self</span>.university = <span class="text-yellow-300">"PGP College of Engineering and Technology"</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-orange-300">self</span>.target_roles = [<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-yellow-300">"Data Analyst"</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-yellow-300">"Machine Learning Engineer"</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-orange-300">self</span>.mindset = <span class="text-yellow-300">"Data-Driven Problem Solving"</span><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Scrolling Tech Marquee -->
+        <div class="mt-20 border-t border-gray-800 bg-[#0d1117] py-3 overflow-hidden relative flex items-center">
+            <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#0d1117] to-transparent z-10"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#0d1117] to-transparent z-10"></div>
+            
+            <div class="animate-scroll font-mono text-sm tracking-widest flex items-center">
+                <!-- Set 1 -->
+                <span class="text-[#58a6ff] mx-3">•</span> <span class="text-gray-400">Python</span>
+                <span class="text-teal-400 mx-3">•</span> <span class="text-gray-400">SQL</span>
+                <span class="text-purple-400 mx-3">•</span> <span class="text-gray-400">Pandas</span>
+                <span class="text-yellow-400 mx-3">•</span> <span class="text-gray-400">NumPy</span>
+                <span class="text-green-400 mx-3">•</span> <span class="text-gray-400">Scikit-learn</span>
+                <span class="text-red-400 mx-3">•</span> <span class="text-gray-400">OpenCV</span>
+                <span class="text-blue-400 mx-3">•</span> <span class="text-gray-400">Flask</span>
+                <span class="text-pink-400 mx-3">•</span> <span class="text-gray-400">MySQL</span>
+                <span class="text-indigo-400 mx-3">•</span> <span class="text-gray-400">Power BI</span>
+                <span class="text-[#58a6ff] mx-3">•</span> <span class="text-gray-400">Tableau</span>
+                <span class="text-teal-400 mx-3">•</span> <span class="text-gray-400">Git/GitHub</span>
+                <span class="text-purple-400 mx-3">•</span> <span class="text-gray-400">Matplotlib</span>
+                <span class="text-yellow-400 mx-3">•</span> <span class="text-gray-400">EDA</span>
+                <span class="text-green-400 mx-3">•</span> <span class="text-gray-400">Data Analytics</span>
+                
+                <!-- Set 2 -->
+                <span class="text-[#58a6ff] mx-3">•</span> <span class="text-gray-400">Python</span>
+                <span class="text-teal-400 mx-3">•</span> <span class="text-gray-400">SQL</span>
+                <span class="text-purple-400 mx-3">•</span> <span class="text-gray-400">Pandas</span>
+                <span class="text-yellow-400 mx-3">•</span> <span class="text-gray-400">NumPy</span>
+                <span class="text-green-400 mx-3">•</span> <span class="text-gray-400">Scikit-learn</span>
+                <span class="text-red-400 mx-3">•</span> <span class="text-gray-400">OpenCV</span>
+                <span class="text-blue-400 mx-3">•</span> <span class="text-gray-400">Flask</span>
+                <span class="text-pink-400 mx-3">•</span> <span class="text-gray-400">MySQL</span>
+                <span class="text-indigo-400 mx-3">•</span> <span class="text-gray-400">Power BI</span>
+                <span class="text-[#58a6ff] mx-3">•</span> <span class="text-gray-400">Tableau</span>
+                <span class="text-teal-400 mx-3">•</span> <span class="text-gray-400">Git/GitHub</span>
+                <span class="text-purple-400 mx-3">•</span> <span class="text-gray-400">Matplotlib</span>
+                <span class="text-yellow-400 mx-3">•</span> <span class="text-gray-400">EDA</span>
+                <span class="text-green-400 mx-3">•</span> <span class="text-gray-400">Data Analytics</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-[#161b22]">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-900/20 border border-teal-800/30 text-teal-400 text-xs font-semibold tracking-wide mb-4">
+                    <i class="far fa-user"></i> ABOUT ME
+                </div>
+                <h2 class="text-4xl font-bold text-white mb-3">Who I am</h2>
+                <p class="text-gray-400">A brief, honest introduction based on my CV.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Narrative Box -->
+                <div class="lg:col-span-5 bg-[#0d1117] border border-gray-800 rounded-2xl p-8 shadow-lg">
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        I'm <strong class="text-white">V. Ponni</strong>, a <strong class="text-white">B.E. Computer Science and Engineering student</strong> at PGP College of Engineering and Technology with a strong foundation in <span class="text-[#58a6ff] font-medium">Python</span>, <span class="text-[#58a6ff] font-medium">SQL</span>, and <span class="text-teal-400 font-medium">Data Analytics</span>.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        My passion lies in turning raw data into actionable insights and intelligent systems. From engineering facial recognition attendance systems using OpenCV to predicting customer churn patterns with Scikit-learn, my focus is always on building <strong class="text-white">practical, data-driven solutions</strong>.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        I recently completed a Data Science internship at TVK Technologies, where I sharpened my collaborative and problem-solving skills. I am eager to contribute my technical foundation to impactful ML and Data Analytics internship opportunities.
+                    </p>
+                </div>
+
+                <!-- Strengths Grid -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-[#0d1117] border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-colors">
+                        <div class="bg-[#161b22] w-10 h-10 rounded-lg flex items-center justify-center text-[#58a6ff] mb-4 border border-gray-700">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h4 class="text-white font-bold mb-2">Data Analytics</h4>
+                        <p class="text-gray-400 text-sm">Proficient in EDA, structured reporting pipelines, and interactive visualizations using Pandas and Matplotlib.</p>
+                    </div>
+                    <div class="bg-[#0d1117] border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-colors">
+                        <div class="bg-[#161b22] w-10 h-10 rounded-lg flex items-center justify-center text-[#58a6ff] mb-4 border border-gray-700">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4 class="text-white font-bold mb-2">Machine Learning</h4>
+                        <p class="text-gray-400 text-sm">Building predictive models using Scikit-learn, focusing on classification, regression, and model evaluation.</p>
+                    </div>
+                    <div class="bg-[#0d1117] border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-colors">
+                        <div class="bg-[#161b22] w-10 h-10 rounded-lg flex items-center justify-center text-[#58a6ff] mb-4 border border-gray-700">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4 class="text-white font-bold mb-2">Programming</h4>
+                        <p class="text-gray-400 text-sm">Strong practical foundations in Python, SQL, and HTML for application development.</p>
+                    </div>
+                    <div class="bg-[#0d1117] border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-colors">
+                        <div class="bg-[#161b22] w-10 h-10 rounded-lg flex items-center justify-center text-[#58a6ff] mb-4 border border-gray-700">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h4 class="text-white font-bold mb-2">Computer Vision</h4>
+                        <p class="text-gray-400 text-sm">Experience leveraging OpenCV for real-time facial recognition and automated detection systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-[#0d1117]">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-900/20 border border-teal-800/30 text-teal-400 text-xs font-semibold tracking-wide mb-4">
+                    <i class="fas fa-layer-group"></i> SKILLS
+                </div>
+                <h2 class="text-4xl font-bold text-white mb-3">What I work with</h2>
+                <p class="text-gray-400">Categorised by area — no inflated proficiency scores, just the tools I genuinely use.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Programming -->
+                <div class="bg-[#11151d] border border-gray-800 rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-[#161b22] p-2 rounded border border-gray-700 text-[#58a6ff]">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-white font-bold">Programming</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">Python</span>
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">SQL</span>
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">HTML</span>
+                    </div>
+                </div>
+
+                <!-- ML & Libraries -->
+                <div class="bg-[#11151d] border border-gray-800 rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-[#161b22] p-2 rounded border border-gray-700 text-purple-400">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-white font-bold">ML & Libraries</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">Pandas</span>
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">NumPy</span>
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">Scikit-learn</span>
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">OpenCV</span>
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">Matplotlib</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Frameworks -->
+                <div class="bg-[#11151d] border border-gray-800 rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-[#161b22] p-2 rounded border border-gray-700 text-teal-400">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3 class="text-white font-bold">Tools & Frameworks</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">Flask</span>
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">Git & GitHub</span>
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">Power BI</span>
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">Tableau</span>
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">Excel</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & Core -->
+                <div class="bg-[#11151d] border border-gray-800 rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-[#161b22] p-2 rounded border border-gray-700 text-yellow-500">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="text-white font-bold">Cloud & Core</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">GCP (Basic)</span>
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">Google Colab</span>
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">MySQL</span>
+                        <span class="px-3 py-1 bg-[#161b22] border border-gray-700 text-gray-300 rounded-full text-xs">EDA</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-4 bg-[#161b22]">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-900/20 border border-teal-800/30 text-teal-400 text-xs font-semibold tracking-wide mb-4">
+                    <i class="fas fa-graduation-cap"></i> ACADEMIC BACKGROUND
+                </div>
+                <h2 class="text-4xl font-bold text-white mb-3">Education</h2>
+                <p class="text-gray-400">My academic timeline.</p>
+            </div>
+
+            <div class="relative border-l border-gray-800 ml-4 md:ml-32 space-y-10">
+                <!-- University -->
+                <div class="relative pl-8 md:pl-16">
+                    <div class="absolute -left-[5px] top-12 h-2.5 w-2.5 rounded-full bg-teal-400 ring-4 ring-[#161b22]"></div>
+                    <div class="md:absolute md:-left-32 md:top-11 text-teal-400 font-medium text-sm mb-2 md:mb-0">
+                        2023 - 2027
+                    </div>
+                    <div class="bg-[#0d1117] border border-gray-800 rounded-xl p-6 md:p-8 relative overflow-hidden hover:border-gray-600 transition-colors">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2">PGP College of Engineering and Technology</h3>
+                                <p class="text-gray-400 text-sm">B.E. in Computer Science and Engineering (Honours)</p>
+                                <p class="text-gray-500 text-xs mt-2 font-mono">Current CGPA: 8.3</p>
+                            </div>
+                            <span class="inline-block px-3 py-1 bg-blue-900/30 text-blue-400 border border-blue-800/50 rounded-full text-xs font-bold tracking-wide">
+                                ONGOING
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (UPDATED) -->
+    <section id="projects" class="py-20 px-4 bg-[#161b22]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-10 flex items-center"><i class="fas fa-rocket mr-3 text-[#58a6ff]"></i> Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Added onclick event to trigger the modal and pass the specific project ID -->
+                <div onclick="openModal('smart-attendance')" class="bg-[#0d1117] p-8 rounded-xl border border-gray-800 card-hover flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Smart Attendance System</h3>
+                        <p class="text-gray-400 text-sm mb-4">Engineered an automated computer vision attendance system leveraging facial recognition to detect and register student attendance in real time.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-800">
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">OpenCV</span>
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">NumPy</span>
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">MySQL</span>
+                    </div>
+                </div>
+
+                <div onclick="openModal('attendance-report')" class="bg-[#0d1117] p-8 rounded-xl border border-gray-800 card-hover flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Attendance Report Visualization</h3>
+                        <p class="text-gray-400 text-sm mb-4">Developed structured reporting pipelines and interactive graphical visualizations for automated tracking of attendance distributions.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-800">
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">Pandas</span>
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">Matplotlib</span>
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">SQL</span>
+                    </div>
+                </div>
+
+                <div onclick="openModal('churn-prediction')" class="bg-[#0d1117] p-8 rounded-xl border border-gray-800 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white">Customer Churn Analysis</h3>
+                            <span class="px-2 py-1 bg-yellow-900/30 text-yellow-500 rounded text-[10px] font-bold border border-yellow-700/50">IN PROGRESS</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Implementing a predictive Flask-based web application to classify and forecast customer churn patterns.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-800">
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">Scikit-learn</span>
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">Flask</span>
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">Python</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 bg-[#0d1117]">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-8 flex items-center"><i class="fas fa-briefcase mr-3 text-[#58a6ff]"></i> Experience</h2>
+            <div class="space-y-8 border-l-2 border-gray-800 pl-6 relative">
+                <div class="relative bg-[#11151d] p-6 rounded-xl border border-gray-800 hover:border-gray-600 transition-colors">
+                    <div class="absolute -left-[31px] top-6 bg-[#0d1117] text-[#58a6ff] rounded-full p-1"><i class="fas fa-circle text-[10px]"></i></div>
+                    
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="text-xl font-bold text-white">Python with Data Science Intern</h4>
+                        <span class="text-gray-500 text-sm font-mono bg-[#161b22] px-2 py-1 rounded">Jun 2026 - Jul 2026</span>
+                    </div>
+                    <p class="text-[#58a6ff] text-sm mb-4 font-medium">TVK Technologies</p>
+                    
+                    <ul class="text-gray-400 text-sm space-y-2 list-disc pl-4">
+                        <li>Completed an internship in Python with Data Science under the supervision of the Program Manager.</li>
+                        <li>Contributed to the development, task execution, testing, and documentation of an Attendance Management System project.</li>
+                        <li>Demonstrated solid problem-solving ability, adaptability, punctuality, and collaborative teamwork throughout the tenure.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-[#161b22]">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-900/20 border border-teal-800/30 text-teal-400 text-xs font-semibold tracking-wide mb-4">
+                    <i class="fas fa-envelope"></i> CONTACT
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-3 tracking-tight">Let's connect</h2>
+                <p class="text-gray-400">Reach out for internships, collaboration or a quick chat.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    
+                    <a href="mailto:ponniivelan@gmail.com" target="_blank" rel="noopener noreferrer" class="bg-[#0d1117] border border-gray-800 p-5 rounded-xl flex items-center justify-between group hover:border-[#58a6ff] transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-[#161b22] w-10 h-10 rounded-lg flex items-center justify-center text-[#58a6ff]">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-bold tracking-wider mb-0.5">EMAIL</p>
+                                <p class="text-gray-300 text-sm font-medium truncate w-32">ponniivelan@...</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-gray-600 group-hover:text-[#58a6ff] text-sm"></i>
+                    </a>
+
+                    <a href="tel:+916381544385" class="bg-[#0d1117] border border-gray-800 p-5 rounded-xl flex items-center justify-between group hover:border-teal-400 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-[#161b22] w-10 h-10 rounded-lg flex items-center justify-center text-teal-400">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-bold tracking-wider mb-0.5">MOBILE</p>
+                                <p class="text-gray-300 text-sm font-medium">+91 63815 44385</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-gray-600 group-hover:text-teal-400 text-sm"></i>
+                    </a>
+
+                    <a href="https://linkedin.com/in/ponni-v-a98ba3414" target="_blank" rel="noopener noreferrer" class="bg-[#0d1117] border border-gray-800 p-5 rounded-xl flex items-center justify-between group hover:border-[#0A66C2] transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-[#161b22] w-10 h-10 rounded-lg flex items-center justify-center text-[#0A66C2]">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-bold tracking-wider mb-0.5">LINKEDIN</p>
+                                <p class="text-gray-300 text-sm font-medium truncate w-32">ponni-v-a98b...</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-gray-600 group-hover:text-[#0A66C2] text-sm"></i>
+                    </a>
+
+                    <a href="https://github.com/Ponni16" target="_blank" rel="noopener noreferrer" class="bg-[#0d1117] border border-gray-800 p-5 rounded-xl flex items-center justify-between group hover:border-white transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-[#161b22] w-10 h-10 rounded-lg flex items-center justify-center text-white">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-bold tracking-wider mb-0.5">GITHUB</p>
+                                <p class="text-gray-300 text-sm font-medium">Ponni16</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-gray-600 group-hover:text-white text-sm"></i>
+                    </a>
+
+                    <a href="https://kaggle.com/ponni07" target="_blank" rel="noopener noreferrer" class="bg-[#0d1117] border border-gray-800 p-5 rounded-xl flex items-center justify-between group hover:border-[#20BEFF] transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-[#161b22] w-10 h-10 rounded-lg flex items-center justify-center text-[#20BEFF]">
+                                <i class="fab fa-kaggle"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-bold tracking-wider mb-0.5">KAGGLE</p>
+                                <p class="text-gray-300 text-sm font-medium">ponni07</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-gray-600 group-hover:text-[#20BEFF] text-sm"></i>
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="bg-[#0d1117] border border-gray-800 p-5 rounded-xl flex items-center justify-between group hover:border-purple-400 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-[#161b22] w-10 h-10 rounded-lg flex items-center justify-center text-purple-400">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-bold tracking-wider mb-0.5">CV</p>
+                                <p class="text-gray-300 text-sm font-medium">View my CV</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-gray-600 group-hover:text-purple-400 text-sm"></i>
+                    </a>
+                </div>
+
+                <div class="bg-gradient-to-br from-[#0d1117] to-[#161b22] border border-gray-800 rounded-2xl p-8 lg:p-10 flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute -top-24 -right-24 w-64 h-64 bg-[#58a6ff]/10 rounded-full blur-3xl"></div>
+                    
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 z-10">Open to internship opportunities</h3>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-8 z-10">
+                        I'm a B.E. Computer Science student actively seeking internships in Data Analysis, Machine Learning, and Data Science. If my profile fits what you're looking for, I'd love to hear from you.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 z-10">
+                        <a href="mailto:ponniivelan@gmail.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-[#58a6ff] text-gray-900 font-bold rounded-lg hover:opacity-90 transition-opacity flex items-center gap-2">
+                            <i class="fas fa-envelope"></i> Email me
+                        </a>
+                        <a href="https://linkedin.com/in/ponni-v-a98ba3414" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-[#11151d] border border-gray-700 text-white font-medium rounded-lg hover:bg-gray-800 transition-colors flex items-center gap-2">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Overlay & Window -->
+    <div id="projectModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        <div class="bg-[#11151d] border border-gray-700 rounded-2xl p-8 max-w-lg w-full mx-4 transform scale-95 transition-transform duration-300 relative" id="modalContent">
+            
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-white transition">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            
+            <h3 id="modalTitle" class="text-2xl font-bold text-white mb-4 pr-8">Project Title</h3>
+            <p id="modalDesc" class="text-gray-300 text-sm mb-6 leading-relaxed">Project description goes here.</p>
+            
+            <div id="modalTools" class="flex flex-wrap gap-2 mb-8">
+                <!-- Tools injected by Javascript here -->
+            </div>
+            
+            <div class="flex justify-end gap-4 pt-4 border-t border-gray-800">
+                <button onclick="closeModal()" class="px-5 py-2.5 bg-[#161b22] border border-gray-700 text-white font-medium rounded-lg hover:bg-gray-800 transition-colors">
+                    Close
+                </button>
+                <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-gradient-to-r from-teal-400 to-[#58a6ff] text-gray-900 font-bold rounded-lg hover:opacity-90 transition-opacity flex items-center gap-2">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript logic to handle the modal popup -->
+    <script>
+        // Database to store project details and URLs
+        const projectData = {
+            'smart-attendance': {
+                title: 'Smart Attendance System',
+                desc: 'Engineered an automated computer vision attendance system leveraging facial recognition to detect and register student attendance in real time. Features seamless integration with local databases to log records autonomously without manual intervention.',
+                tools: ['OpenCV', 'NumPy', 'MySQL'],
+                url: 'https://github.com/padmini1306/Smart-Attendance-System'
+            },
+            'attendance-report': {
+                title: 'Attendance Report Visualization',
+                desc: 'Developed structured reporting pipelines and interactive graphical visualizations for automated tracking of attendance distributions. Provides analytical insights into student presence patterns over specific intervals.',
+                tools: ['Pandas', 'Matplotlib', 'SQL'],
+                url: 'https://github.com/Ponni16/Attendance-Report'
+            },
+            'churn-prediction': {
+                title: 'Customer Churn Analysis',
+                desc: 'Implementing a predictive Flask-based web application to classify and forecast customer churn patterns. The project utilizes machine learning classifiers deployed into a functional user interface to deliver real-time churn predictions.',
+                tools: ['Scikit-learn', 'Flask', 'Python'],
+                url: 'https://github.com/VEERA16-16/churn-prediction-app'
+            }
+        };
+
+        const modal = document.getElementById('projectModal');
+        const modalContent = document.getElementById('modalContent');
+        
+        function openModal(projectId) {
+            const data = projectData[projectId];
+            
+            // Populate modal data
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalDesc').textContent = data.desc;
+            document.getElementById('modalLink').href = data.url;
+            
+            // Populate Tools
+            const toolsContainer = document.getElementById('modalTools');
+            toolsContainer.innerHTML = '';
+            data.tools.forEach(tool => {
+                toolsContainer.innerHTML += `<span class="px-3 py-1 bg-[#161b22] border border-[#58a6ff]/40 text-[#58a6ff] rounded-full text-xs font-semibold">${tool}</span>`;
+            });
+            
+            // Show modal and trigger animations
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            // Trigger exit animations
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        }
+
+        // Allow closing the modal by clicking outside the modal content box
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
